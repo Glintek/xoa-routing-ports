@@ -9,14 +9,11 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-# Get the directory where the script is located
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-# Execute uninstall command
 echo "Removing routing rules..."
 "${SCRIPT_DIR}/xoa-routing-ports" uninstall
 
-# Remove installed files
 echo "Removing installed files..."
 rm -f "${SCRIPT_DIR}/xoa-routing-ports"
 rm -f "${SCRIPT_DIR}/.vendor.default.conf"
