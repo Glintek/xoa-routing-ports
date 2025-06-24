@@ -19,3 +19,53 @@ After installation, you can run the tool using:
 ```bash
 ./xoa-routing-ports
 ```
+
+## Usage
+
+### Check System Health
+```bash
+sudo ./xoa-routing-ports health
+```
+
+### Port Forwarding
+
+#### Add a Port Forward
+```bash
+sudo ./xoa-routing-ports forward --from-port <local-port> --to <destination-ip:port>
+```
+Example:
+```bash
+sudo ./xoa-routing-ports forward --from-port 80 --to 192.168.20.100:8080
+```
+
+#### List Active Forwards
+```bash
+sudo ./xoa-routing-ports list
+```
+
+#### Remove a Port Forward
+```bash
+sudo ./xoa-routing-ports unforward <local-port>
+```
+Example:
+```bash
+sudo ./xoa-routing-ports unforward 80
+```
+
+### Configuration Management
+
+#### Update Base Configuration
+```bash
+sudo ./xoa-routing-ports update-base
+```
+
+#### Restore Original Configuration
+```bash
+sudo ./xoa-routing-ports restore
+```
+
+#### Uninstall
+```bash
+sudo ./xoa-routing-ports uninstall
+```
+
