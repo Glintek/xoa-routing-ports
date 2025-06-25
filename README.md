@@ -10,6 +10,11 @@ You can install the tool using the following command:
 curl -sSL https://raw.githubusercontent.com/Glintek/xoa-routing-ports/main/install.sh | bash
 ```
 
+Make CLI install and require system to use our configuaraton for firewall.
+```bash 
+doas ./xoa-routing-ports forward
+```
+
 This will install the cli at current working directory
 
 ## Usage
