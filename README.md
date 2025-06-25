@@ -9,13 +9,13 @@ You can install the tool using the following command:
 ```bash
 curl -sSL https://raw.githubusercontent.com/Glintek/xoa-routing-ports/main/install.sh | bash
 ```
-
-Make CLI install and require system to use our configuaraton for firewall.
-```bash 
-doas ./xoa-routing-ports forward
-```
-
 This will install the cli at current working directory
+
+To make CLI install and require system to use our configuaraton for firewall, please run:
+```bash 
+doas ./xoa-routing-ports install
+```
+Now router will use this cli conf (please remove if not use it anymore)
 
 ## Usage
 
@@ -72,5 +72,9 @@ doas ./xoa-routing-ports restore
 #### Uninstall
 ```bash
 doas ./xoa-routing-ports uninstall
+```
+Remove system config
+```bash
+doas ./uninstall.sh
 ```
 
